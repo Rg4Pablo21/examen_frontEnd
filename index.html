@@ -8,23 +8,42 @@
 </head>
 <body>
     <header>
-        <h1>Lista de Asistencia</h1>
+        Lista de Asistencia 📋
     </header>
 
-    <main>
-        <section id="asistencia">
+    <div class="container">
+        <form id="formularioAsistencia">
             <h2>Registrar Asistencia</h2>
-            <form id="form-asistencia">
-                <input type="text" id="nombre" placeholder="Nombre del estudiante" required>
-                <button type="submit">Registrar</button>
-            </form>
-        </section>
 
-        <section id="lista">
-            <h2>Lista de Estudiantes</h2>
-            <ul id="lista-estudiantes"></ul>
-        </section>
-    </main>
+            <label for="alumno_nombre">Nombre del Alumno:</label>
+            <input type="text" id="alumno_nombre" required />
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" required />
+
+            <label for="estado">Estado:</label>
+            <select id="estado" required>
+                <option value="Presente">Presente</option>
+                <option value="Ausente">Ausente</option>
+            </select>
+
+            <button type="submit">Registrar Asistencia</button>
+        </form>
+
+        <h2>Lista de Asistencia</h2>
+        <table id="tabla-asistencia">
+            <thead>
+                <tr>
+                    <th>Alumno</th>
+                    <th>Fecha</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se insertarán los registros dinámicamente -->
+            </tbody>
+        </table>
+    </div>
 
     <script src="script.js"></script>
 </body>
